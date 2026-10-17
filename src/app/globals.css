@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer components {
-  .btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-accent-400/50 disabled:opacity-50; }
+  .btn { @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-accent-400/50 disabled:opacity-50; }
   .btn-primary { @apply btn bg-accent-500 text-brand-900 hover:bg-accent-400; }
   .btn-dark { @apply btn bg-brand-900 text-white hover:bg-brand-700; }
-  .input { @apply w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30; }
+  .input { @apply w-full rounded-lg border border-stone-300 bg-white px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30; }
   .label { @apply mb-1 block text-sm font-medium text-stone-700; }
   .container-p { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
 }
@@ -85,3 +85,78 @@ html { scroll-behavior: smooth; }
 .catalog-card-preview { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid theme("colors.brand.100"); border-radius: 17px; background: white; box-shadow: 0 8px 20px rgb(16 41 74 / 7%); }
 .catalog-card-artwork { position: absolute; inset: 10px 12px 42px; }
 .catalog-card-price { position: absolute; right: 12px; bottom: 9px; color: theme("colors.brand.900"); font-size: clamp(18px, 2vw, 24px); font-weight: 800; line-height: 1.2; white-space: nowrap; }
+
+/* Cream paper, forest ink and coral accents. */
+body { background: #faf8f2; color: #243c31; }
+::selection { background: #ffb29a; color: #163b2c; }
+.site-header { background: #faf8f2f5; border-bottom: 1px solid #163b2c20; backdrop-filter: blur(16px); }
+.site-header > .container-p { min-height: 84px; }
+.site-wordmark { letter-spacing: -.055em; }
+.site-wordmark::before { content: "✳"; display: inline-block; margin-right: 9px; color: #355d45; font-size: 27px; vertical-align: middle; }
+.hero-section { margin: 20px auto 0; max-width: 1440px; background: #e6eddf; border-radius: 6px; }
+.hero-section::before { width: 520px; height: 520px; right: -200px; top: 100px; background: #d0ddc5; opacity: .7; }
+.hero-layout { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 64px; padding-top: 84px; padding-bottom: 90px; }
+.hero-title { max-width: 660px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(44px, 5.8vw, 76px); line-height: 1.03; font-weight: 400; letter-spacing: -.055em; color: #163b2c; }
+.hero-layout > div > p:first-child { padding: 0 0 12px; border-bottom: 1px solid #47765a60; border-radius: 0; background: transparent; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+.hero-layout > div > p { color: #435e4c; }
+.hero-art { position: relative; display: flex; justify-content: center; padding: 58px 0 30px; }
+.hero-card { position: relative; padding: 26px; background: #faf8f2; border: 1px solid #163b2c26; border-radius: 6px; box-shadow: 14px 16px 0 #163b2c; }
+.hero-orbit { position: absolute; right: -18px; top: -65px; color: #a7442d; font-size: 110px; line-height: 1; }
+.hero-caption { display: flex; align-items: start; gap: 24px; padding-top: 25px; font-size: 12px; color: #355d45; }
+.hero-caption > span:first-child { flex-shrink: 0; font-weight: 700; }
+.gift-card { border-radius: 10px; background: linear-gradient(120deg, #163b2c, #47765a); box-shadow: none; }
+.gift-card::before { background: repeating-radial-gradient(circle at 100% 100%, transparent 0 26px, #ffffff12 27px 28px); }
+.perks-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding-top: 42px; padding-bottom: 42px; gap: 0; }
+.feature-card { border-radius: 0; background: transparent; box-shadow: none; padding: 8px 24px; border-right: 1px solid #163b2c25; }
+.feature-card:first-child { padding-left: 0; }
+.feature-card:last-child { border-right: 0; }
+.feature-card > div { font-size: 24px; margin-bottom: 16px; }
+.catalog-section { background: #163b2c; color: #faf8f2; padding: 24px 0 36px; }
+.catalog-heading { align-items: center; margin-bottom: 44px; }
+.catalog-heading h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(32px, 4vw, 48px); letter-spacing: -.035em; font-weight: 400; color: #faf8f2; }
+.catalog-heading p:not(.catalog-eyebrow), .catalog-eyebrow { color: #dce8dc; }
+.catalog-section [role="status"] { color: #dce8dc; }
+.catalog-search { min-height: 50px; border-radius: 4px; border: 1px solid #faf8f250; background: #faf8f2; }
+.catalog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.catalog-item { background: #faf8f2; border-radius: 6px; padding: 16px; }
+.catalog-item h3 { justify-content: flex-start; text-align: left; min-height: 24px; font-size: 18px; margin: 18px 0 14px; }
+.catalog-card-preview { background: #eeeee6; border: 0; border-radius: 4px; box-shadow: none; }
+.catalog-card-artwork { inset: 18px 18px 44px; }
+.catalog-card-price { right: 18px; bottom: 12px; }
+.catalog-amount { border-color: #163b2c30; border-radius: 4px; background: transparent; padding: 12px; }
+.catalog-buy { border-radius: 4px; padding: 13px; box-shadow: none; }
+.steps-section { padding-top: 80px; padding-bottom: 60px; }
+.steps-section h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(32px, 4vw, 46px); letter-spacing: -.035em; text-align: left; }
+.step-card { border-top: 1px solid #163b2c40; padding: 24px 0; }
+.step-card > span { margin: 0 0 30px; width: auto; height: auto; justify-content: start; background: transparent; color: #a7442d; font-family: Georgia, serif; font-size: 44px; font-weight: 400; }
+.step-card > span::before { content: "0"; }
+.comment-card { border-radius: 6px !important; box-shadow: none !important; background: #eeeede !important; }
+#personnaliser form { border-radius: 6px; border-top: 4px solid #355d45; }
+main > section:not(.hero-section):not(.catalog-section):not(.perks-grid):not(.steps-section) h1 { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+footer { border-radius: 32px 32px 0 0; }
+.language-trigger { background: transparent; border-color: #163b2c30; border-radius: 6px; color: #355d45; }
+@media (max-width: 1023px) {
+  .hero-layout { gap: 36px; padding-top: 64px; padding-bottom: 64px; }
+  .hero-card { padding: 18px; box-shadow: 9px 11px 0 #163b2c; }
+  .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .site-header > .container-p { min-height: 72px; }
+  .hero-section { margin: 0; border-radius: 0; }
+  .hero-layout { grid-template-columns: minmax(0, 1fr); gap: 18px; padding-top: 42px; padding-bottom: 48px; }
+  .hero-title { max-width: 540px; }
+  .hero-art { padding: 45px 14px 10px 4px; }
+  .hero-orbit { font-size: 80px; top: -44px; right: -8px; }
+  .perks-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 0; }
+  .feature-card, .feature-card:first-child { padding: 0 16px; }
+  .feature-card:nth-child(2) { border-right: 0; }
+  .catalog-heading { gap: 24px; }
+  .catalog-heading > div { width: 100%; }
+  .catalog-search { min-width: 0; }
+  .catalog-grid { gap: 16px; }
+  .steps-section { padding-top: 48px; }
+}
+@media (max-width: 479px) {
+  .catalog-grid { grid-template-columns: minmax(0, 1fr); }
+  .site-wordmark::before { font-size: 22px; margin-right: 5px; }
+}

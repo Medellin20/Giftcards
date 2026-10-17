@@ -38,8 +38,6 @@ export default async function Merci({ searchParams }) {
           <p className="font-bold"><T>Réseau : Bitcoin (BTC) uniquement</T></p>
           {new Date(r.order.bitcoin_expires_at).getTime() > Date.now() ? <>
             <p><T>Montant exact à recevoir :</T> <strong>{(r.order.bitcoin_sats / 100000000).toFixed(8)} BTC</strong></p>
-            <p className="text-sm"><T>Adresse de dépôt :</T></p>
-            <code className="block select-all break-all rounded bg-stone-100 p-3">{r.order.bitcoin_address}</code>
             <a className="btn-primary" href={`bitcoin:${r.order.bitcoin_address}?amount=${(r.order.bitcoin_sats / 100000000).toFixed(8)}`}><T>Ouvrir mon portefeuille Bitcoin</T></a>
             <p className="text-sm"><T>Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.</T></p>
           </> : <p role="status"><T>Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.</T></p>}

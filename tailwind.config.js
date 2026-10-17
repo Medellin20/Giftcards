@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: { 50: "#eef4fb", 100: "#d9e6f5", 500: "#2f6db5", 600: "#245a99", 700: "#1d4a7e", 900: "#10294a" },
-        accent: { 400: "#f7c548", 500: "#f2b01e", 600: "#d99700" },
+        brand: { 50: "#f0f5ef", 100: "#dce8dc", 500: "#47765a", 600: "#355d45", 700: "#264936", 900: "#163b2c" },
+        accent: { 400: "#ffb29a", 500: "#ff997b", 600: "#a7442d" },
       },
       fontFamily: { sans: ["ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"] },
     },
