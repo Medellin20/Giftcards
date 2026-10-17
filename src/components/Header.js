@@ -16,9 +16,9 @@ export default function Header() {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
   return (
-    <header className="site-header sticky top-0 z-40">
+    <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/90 backdrop-blur">
       <div className="container-p flex min-h-16 items-center justify-between gap-3 py-2">
-        <Link href="/" className="site-wordmark min-w-0 text-base font-extrabold tracking-tight text-brand-900 sm:text-xl">
+        <Link href="/" className="min-w-0 text-base font-extrabold tracking-tight text-brand-900 sm:text-xl">
           Cartes <span className="text-accent-600">cadeaux</span>
         </Link>
         <nav className="hidden min-w-0 items-center gap-5 xl:flex">
