@@ -159,7 +159,9 @@
     "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement.": "We are waiting for our team to verify the Bitcoin deposit. This page refreshes automatically.",
     "Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.": "Send within 30 minutes of order creation. You pay the network fees.",
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "The payment window has expired. If you already sent BTC, wait for verification. Otherwise, create a new order.",
-    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Keep your transaction ID (TXID) and order number. Receipt is verified before codes are sent."
+    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Keep your transaction ID (TXID) and order number. Receipt is verified before codes are sent.",
+    "Liens de réception crypto": "Crypto reception links",
+    "Lien de réception à configurer": "Reception link to configure"
   },
   "de": {
     "Cartes cadeaux": "Geschenkkarten",
@@ -321,7 +323,9 @@
     "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement.": "Wir warten auf die Prüfung der Bitcoin-Einzahlung durch unser Team. Diese Seite wird automatisch aktualisiert.",
     "Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.": "Senden Sie innerhalb von 30 Minuten nach Bestellung. Sie tragen die Netzwerkgebühren.",
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "Die Zahlungsfrist ist abgelaufen. Falls Sie BTC gesendet haben, warten Sie auf die Prüfung. Andernfalls bestellen Sie erneut.",
-    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewahren Sie TXID und Bestellnummer auf. Der Eingang wird vor dem Codeversand geprüft."
+    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewahren Sie TXID und Bestellnummer auf. Der Eingang wird vor dem Codeversand geprüft.",
+    "Liens de réception crypto": "Krypto-Empfangslinks",
+    "Lien de réception à configurer": "Empfangslink noch einzurichten"
   },
   "es": {
     "Cartes cadeaux": "Tarjetas regalo",
@@ -483,7 +487,9 @@
     "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement.": "Esperamos la verificación del depósito Bitcoin por nuestro equipo. Esta página se actualiza automáticamente.",
     "Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.": "Envía en los 30 minutos posteriores al pedido. Los gastos de red corren por tu cuenta.",
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "El plazo ha expirado. Si ya enviaste BTC, espera la verificación. Si no, crea otro pedido.",
-    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva el TXID y el número de pedido. La recepción se verifica antes de enviar los códigos."
+    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva el TXID y el número de pedido. La recepción se verifica antes de enviar los códigos.",
+    "Liens de réception crypto": "Enlaces de recepción de criptomonedas",
+    "Lien de réception à configurer": "Enlace de recepción por configurar"
   },
   "it": {
     "Cartes cadeaux": "Carte regalo",
@@ -645,7 +651,9 @@
     "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement.": "Attendiamo la verifica del deposito Bitcoin da parte del nostro team. La pagina si aggiorna automaticamente.",
     "Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.": "Invia entro 30 minuti dalla creazione dell’ordine. Le commissioni di rete sono a tuo carico.",
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "Il termine è scaduto. Se hai già inviato BTC, attendi la verifica. Altrimenti crea un nuovo ordine.",
-    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva TXID e numero d’ordine. La ricezione viene verificata prima dell’invio dei codici."
+    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva TXID e numero d’ordine. La ricezione viene verificata prima dell’invio dei codici.",
+    "Liens de réception crypto": "Link di ricezione crypto",
+    "Lien de réception à configurer": "Link di ricezione da configurare"
   },
   "nl": {
     "Cartes cadeaux": "Cadeaukaarten",
@@ -807,6 +815,8 @@
     "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement.": "We wachten op controle van de Bitcoin-storting door ons team. Deze pagina wordt automatisch vernieuwd.",
     "Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.": "Verstuur binnen 30 minuten na de bestelling. Je betaalt de netwerkkosten.",
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "De betaaltermijn is verstreken. Heb je BTC verstuurd, wacht dan op controle. Maak anders een nieuwe bestelling.",
-    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewaar je TXID en bestelnummer. Ontvangst wordt gecontroleerd voordat codes worden verstuurd."
+    "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewaar je TXID en bestelnummer. Ontvangst wordt gecontroleerd voordat codes worden verstuurd.",
+    "Liens de réception crypto": "Crypto-ontvangstlinks",
+    "Lien de réception à configurer": "Ontvangstlink nog in te stellen"
   }
 }

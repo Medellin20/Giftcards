@@ -3,6 +3,7 @@
 import { T, useLanguage } from "@/components/LanguageProvider";
 import { useState } from "react";
 import { CARD_AMOUNTS } from "@/lib/catalog";
+import { CRYPTO_LINKS, receptionUrl } from "@/lib/crypto-links";
 import CatalogCardPreview from "./CatalogCardPreview";
 
 const PRESETS = CARD_AMOUNTS;
@@ -81,6 +82,21 @@ export default function AmountForm({ brand, initialAmount = 100, initialQuantity
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" value={f.website} onChange={set("website")} aria-hidden="true" />
 
         <div className="rounded-xl border border-brand-100 bg-brand-50 p-4">
+          <div className="mb-4 grid grid-cols-3 gap-2" aria-label={t("Liens de réception crypto")}>
+            {CRYPTO_LINKS.map(({ currency, name, url }) => {
+              const href = receptionUrl(url);
+              const style = "flex min-h-12 items-center justify-center rounded-xl border px-3 py-3 font-bold transition";
+              return href ? (
+                <a key={currency} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (${currency})`} className={`${style} border-brand-600 bg-white text-brand-900 hover:bg-brand-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600`}>
+                  {currency}
+                </a>
+              ) : (
+                <button key={currency} type="button" disabled title={t("Lien de réception à configurer")} aria-label={`${name} (${currency}) — ${t("Lien de réception à configurer")}`} className={`${style} cursor-not-allowed border-stone-200 bg-stone-100 text-stone-400`}>
+                  {currency}
+                </button>
+              );
+            })}
+          </div>
           <p className="font-semibold text-brand-900"><T>Paiement Bitcoin (BTC)</T></p>
           <p id="payment-availability" className="mt-1 text-sm text-stone-600">
             <T>Le montant en BTC et l’adresse de paiement seront affichés à l’étape suivante. Réseau Bitcoin uniquement.</T>
