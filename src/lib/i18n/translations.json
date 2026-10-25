@@ -171,7 +171,14 @@
     "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "We are waiting for our team to verify the payment. This page refreshes automatically.",
     "Adresse de réception": "Receiving address",
     "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Use only the specified network. Send the exact amount within 30 minutes. You pay the network fees.",
-    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "The payment window has expired. If you already paid, wait for verification. Otherwise, create a new order."
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "The payment window has expired. If you already paid, wait for verification. Otherwise, create a new order.",
+    "Votre paiement": "Your payment",
+    "En attente du paiement": "Awaiting payment",
+    "Délai expiré": "Payment window expired",
+    "Réseau de paiement": "Payment network",
+    "Copier l’adresse": "Copy address",
+    "Adresse copiée !": "Address copied!",
+    "Copie automatique indisponible. Copiez l’adresse sélectionnée.": "Automatic copying is unavailable. Copy the selected address."
   },
   "de": {
     "Cartes cadeaux": "Geschenkkarten",
@@ -345,7 +352,14 @@
     "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Wir warten auf die Zahlungsprüfung durch unser Team. Diese Seite wird automatisch aktualisiert.",
     "Adresse de réception": "Empfangsadresse",
     "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Verwenden Sie nur das angegebene Netzwerk. Senden Sie den genauen Betrag innerhalb von 30 Minuten. Sie tragen die Netzwerkgebühren.",
-    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Die Zahlungsfrist ist abgelaufen. Falls Sie bereits bezahlt haben, warten Sie auf die Prüfung. Andernfalls erstellen Sie eine neue Bestellung."
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Die Zahlungsfrist ist abgelaufen. Falls Sie bereits bezahlt haben, warten Sie auf die Prüfung. Andernfalls erstellen Sie eine neue Bestellung.",
+    "Votre paiement": "Ihre Zahlung",
+    "En attente du paiement": "Zahlung ausstehend",
+    "Délai expiré": "Zahlungsfrist abgelaufen",
+    "Réseau de paiement": "Zahlungsnetzwerk",
+    "Copier l’adresse": "Adresse kopieren",
+    "Adresse copiée !": "Adresse kopiert!",
+    "Copie automatique indisponible. Copiez l’adresse sélectionnée.": "Automatisches Kopieren nicht verfügbar. Kopieren Sie die markierte Adresse."
   },
   "es": {
     "Cartes cadeaux": "Tarjetas regalo",
@@ -519,7 +533,14 @@
     "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Esperamos que nuestro equipo verifique el pago. Esta página se actualiza automáticamente.",
     "Adresse de réception": "Dirección de recepción",
     "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Utiliza solo la red indicada. Envía el importe exacto en 30 minutos. Las comisiones de red corren por tu cuenta.",
-    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "El plazo de pago ha caducado. Si ya pagaste, espera la verificación. De lo contrario, crea un nuevo pedido."
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "El plazo de pago ha caducado. Si ya pagaste, espera la verificación. De lo contrario, crea un nuevo pedido.",
+    "Votre paiement": "Tu pago",
+    "En attente du paiement": "Esperando el pago",
+    "Délai expiré": "Plazo caducado",
+    "Réseau de paiement": "Red de pago",
+    "Copier l’adresse": "Copiar dirección",
+    "Adresse copiée !": "¡Dirección copiada!",
+    "Copie automatique indisponible. Copiez l’adresse sélectionnée.": "La copia automática no está disponible. Copia la dirección seleccionada."
   },
   "it": {
     "Cartes cadeaux": "Carte regalo",
@@ -693,7 +714,14 @@
     "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Attendiamo la verifica del pagamento da parte del nostro team. Questa pagina si aggiorna automaticamente.",
     "Adresse de réception": "Indirizzo di ricezione",
     "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Usa solo la rete indicata. Invia l’importo esatto entro 30 minuti. Le commissioni di rete sono a tuo carico.",
-    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Il termine di pagamento è scaduto. Se hai già pagato, attendi la verifica. Altrimenti crea un nuovo ordine."
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Il termine di pagamento è scaduto. Se hai già pagato, attendi la verifica. Altrimenti crea un nuovo ordine.",
+    "Votre paiement": "Il tuo pagamento",
+    "En attente du paiement": "In attesa del pagamento",
+    "Délai expiré": "Termine scaduto",
+    "Réseau de paiement": "Rete di pagamento",
+    "Copier l’adresse": "Copia indirizzo",
+    "Adresse copiée !": "Indirizzo copiato!",
+    "Copie automatique indisponible. Copiez l’adresse sélectionnée.": "Copia automatica non disponibile. Copia l’indirizzo selezionato."
   },
   "nl": {
     "Cartes cadeaux": "Cadeaukaarten",
@@ -867,6 +895,13 @@
     "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "We wachten op de betalingscontrole door ons team. Deze pagina wordt automatisch vernieuwd.",
     "Adresse de réception": "Ontvangstadres",
     "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Gebruik alleen het aangegeven netwerk. Verstuur het exacte bedrag binnen 30 minuten. Je betaalt de netwerkkosten.",
-    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "De betaaltermijn is verstreken. Heb je al betaald, wacht dan op controle. Maak anders een nieuwe bestelling."
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "De betaaltermijn is verstreken. Heb je al betaald, wacht dan op controle. Maak anders een nieuwe bestelling.",
+    "Votre paiement": "Je betaling",
+    "En attente du paiement": "In afwachting van betaling",
+    "Délai expiré": "Betaaltermijn verstreken",
+    "Réseau de paiement": "Betaalnetwerk",
+    "Copier l’adresse": "Adres kopiëren",
+    "Adresse copiée !": "Adres gekopieerd!",
+    "Copie automatique indisponible. Copiez l’adresse sélectionnée.": "Automatisch kopiëren is niet beschikbaar. Kopieer het geselecteerde adres."
   }
 }

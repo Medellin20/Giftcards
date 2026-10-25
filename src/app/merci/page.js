@@ -3,6 +3,7 @@ import Link from "next/link";
 import { fulfillOrder } from "@/lib/fulfill";
 import { maskEmail } from "@/lib/format";
 import Refresher from "@/components/Refresher";
+import PaymentDetails from "@/components/PaymentDetails";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Confirmation — Cartes cadeaux", robots: { index: false } };
@@ -28,36 +29,23 @@ export default async function Merci({ searchParams }) {
   const v = views[r.status] || views.not_found;
 
   return (
-    <section className="container-p max-w-xl py-20 text-center">
+    <section className="mx-auto w-full max-w-xl px-4 py-12 text-center sm:px-6 sm:py-16">
       {r.status === "pending" && <Refresher />}
-      <div className="text-6xl">{v.icon}</div>
-      <h1 className="mt-4 text-3xl font-extrabold text-brand-900"><T>{v.title}</T></h1>
-      <p className="mt-3 text-stone-600"><T>{v.text}</T></p>
+      <div aria-hidden="true" className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-50 text-3xl ring-1 ring-brand-100">{v.icon}</div>
+      <h1 className="mt-5 text-2xl font-extrabold tracking-tight sm:text-3xl text-brand-900"><T>{v.title}</T></h1>
+      <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-stone-500"><T>{v.text}</T></p>
       {r.status === "pending" && r.order?.payment_method === "crypto" && (
-        <div className="mt-6 space-y-4 rounded-2xl bg-white p-6 text-left ring-1 ring-stone-200">
-          <p className="font-bold"><T values={{ network: r.order.crypto_network }}>{"Réseau : {network}"}</T></p>
-          {new Date(r.order.crypto_expires_at).getTime() > Date.now() ? <>
-            <p><T>Montant exact à recevoir :</T> <strong>{r.order.crypto_amount} {r.order.crypto_currency}</strong></p>
-            <p className="text-sm"><T>Adresse de réception</T></p>
-            <code className="block break-all rounded-xl bg-stone-100 p-3 text-sm">{r.order.crypto_address}</code>
-            <p className="text-sm"><T>Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.</T></p>
-          </> : <p role="status"><T>Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.</T></p>}
-          <p className="text-sm"><T>Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.</T></p>
-        </div>
+        <PaymentDetails currency={r.order.crypto_currency} network={r.order.crypto_network}
+          amount={r.order.crypto_amount} address={r.order.crypto_address} expiresAt={r.order.crypto_expires_at} />
       )}
       {r.status === "pending" && r.order?.payment_method === "bitcoin" && (
-        <div className="mt-6 space-y-4 rounded-2xl bg-white p-6 text-left ring-1 ring-stone-200">
-          <p className="font-bold"><T>Réseau : Bitcoin (BTC) uniquement</T></p>
-          {new Date(r.order.bitcoin_expires_at).getTime() > Date.now() ? <>
-            <p><T>Montant exact à recevoir :</T> <strong>{(r.order.bitcoin_sats / 100000000).toFixed(8)} BTC</strong></p>
-            <a className="btn-primary" href={`bitcoin:${r.order.bitcoin_address}?amount=${(r.order.bitcoin_sats / 100000000).toFixed(8)}`}><T>Ouvrir mon portefeuille Bitcoin</T></a>
-            <p className="text-sm"><T>Envoyez sous 30 minutes après la création de la commande. Les frais de réseau sont à votre charge.</T></p>
-          </> : <p role="status"><T>Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.</T></p>}
-          <p className="text-sm"><T>Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.</T></p>
-        </div>
+        <PaymentDetails currency="BTC" network="Bitcoin (BTC)"
+          amount={(r.order.bitcoin_sats / 100000000).toFixed(8)} address={r.order.bitcoin_address}
+          expiresAt={r.order.bitcoin_expires_at}
+          walletUrl={`bitcoin:${r.order.bitcoin_address}?amount=${(r.order.bitcoin_sats / 100000000).toFixed(8)}`} />
       )}
-      {id && <p className="mt-2 text-xs text-stone-400"><T>Commande :</T>{" "}{id}</p>}
-      <Link href="/" className="btn-dark mt-8"><T>Retour à l’accueil</T></Link>
+      {id && <p className="mt-6 break-all text-xs leading-relaxed text-stone-400"><T>Commande :</T>{" "}{id}</p>}
+      <Link href="/" className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full px-5 text-sm font-semibold text-brand-600 transition hover:bg-brand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-500"><T>Retour à l’accueil</T></Link>
     </section>
   );
 }
