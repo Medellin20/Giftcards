@@ -78,3 +78,9 @@ Le bouton globe de l’en-tête propose le français, l’anglais, l’allemand,
 Pour autoriser les montants de 20 € et 25 € dans une base existante, appliquer `supabase/migrations/20261015_add_20_25_amounts.sql` après la migration des quantités.
 
 Le plafond d’achat est de 500 € par carte, contrôlé par le formulaire et l’API de commande. Les contraintes de base existantes restent compatibles avec les anciennes commandes supérieures à 500 €.
+
+## Paiements BTC, ETH et USDT
+
+Appliquer `supabase/migrations/20261025_crypto_payments.sql` avant de déployer. Les trois adresses et leurs réseaux sont définis dans `src/lib/crypto-links.js` : BTC sur Bitcoin, ETH sur Ethereum et USDT sur TON. Ce sont des adresses, pas des URL HTTPS. Vérifier auprès du portefeuille destinataire que le dépôt USDT sur TON est pris en charge et si un mémo est requis avant d'accepter des paiements.
+
+Le client choisit sa devise ; le serveur calcule le montant au cours Coinbase EUR et enregistre la devise, le réseau et l'adresse avec la commande. La page de paiement affiche les instructions et l'administration permet de confirmer le dépôt par son hash de transaction hexadécimal (préfixe `0x` accepté pour Ethereum). Les anciennes commandes Bitcoin restent prises en charge.

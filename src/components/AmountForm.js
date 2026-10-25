@@ -3,7 +3,7 @@
 import { T, useLanguage } from "@/components/LanguageProvider";
 import { useState } from "react";
 import { CARD_AMOUNTS } from "@/lib/catalog";
-import { CRYPTO_LINKS, receptionUrl } from "@/lib/crypto-links";
+import { CRYPTO_LINKS, cryptoPayment } from "@/lib/crypto-links";
 import CatalogCardPreview from "./CatalogCardPreview";
 
 const PRESETS = CARD_AMOUNTS;
@@ -14,6 +14,8 @@ export default function AmountForm({ brand, initialAmount = 100, initialQuantity
   const [quantity, setQuantity] = useState(initialQuantity);
   const [custom, setCustom] = useState("");
   const [f, setF] = useState({ buyerName: "", buyerEmail: "", recipientName: "", recipientEmail: "", message: "", website: "" });
+  const [currency, setCurrency] = useState("BTC");
+  const payment = cryptoPayment(currency);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
@@ -27,7 +29,7 @@ export default function AmountForm({ brand, initialAmount = 100, initialQuantity
     if (!valid) return setError("Le montant doit être un nombre entier entre 20 € et 500 €.");
     setLoading(true);
     try {
-      const r = await fetch("/api/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...f, brand, amount: value, quantity }) });
+      const r = await fetch("/api/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...f, brand, amount: value, quantity, currency }) });
       const d = await r.json();
       if (!r.ok || !d.url) throw new Error(d.error || "Une erreur est survenue.");
       window.location.href = d.url;
@@ -82,31 +84,28 @@ export default function AmountForm({ brand, initialAmount = 100, initialQuantity
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" value={f.website} onChange={set("website")} aria-hidden="true" />
 
         <div className="rounded-xl border border-brand-100 bg-brand-50 p-4">
-          <div className="mb-4 grid grid-cols-3 gap-2" aria-label={t("Liens de réception crypto")}>
-            {CRYPTO_LINKS.map(({ currency, name, url }) => {
-              const href = receptionUrl(url);
-              const style = "flex min-h-12 items-center justify-center rounded-xl border px-3 py-3 font-bold transition";
-              return href ? (
-                <a key={currency} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (${currency})`} className={`${style} border-brand-600 bg-white text-brand-900 hover:bg-brand-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600`}>
-                  {currency}
-                </a>
-              ) : (
-                <button key={currency} type="button" disabled title={t("Lien de réception à configurer")} aria-label={`${name} (${currency}) — ${t("Lien de réception à configurer")}`} className={`${style} cursor-not-allowed border-stone-200 bg-stone-100 text-stone-400`}>
-                  {currency}
-                </button>
-              );
-            })}
+          <p className="mb-3 font-semibold text-brand-900"><T>Choisissez votre moyen de paiement</T></p>
+          <div className="mb-4 grid grid-cols-3 gap-2" role="group" aria-label={t("Choisissez votre moyen de paiement")}>
+            {CRYPTO_LINKS.map((item) => (
+              <button key={item.currency} type="button" aria-pressed={currency === item.currency}
+                onClick={() => { setCurrency(item.currency); setError(""); }}
+                className={`flex min-h-14 flex-col items-center justify-center rounded-xl border px-2 py-3 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 ${currency === item.currency ? "border-brand-600 bg-brand-600 text-white shadow-sm" : "border-brand-200 bg-white text-brand-900 hover:border-brand-500"}`}>
+                <span className="font-bold">{item.currency}</span>
+                <span className="mt-0.5 text-xs">{item.name}</span>
+              </button>
+            ))}
           </div>
-          <p className="font-semibold text-brand-900"><T>Paiement Bitcoin (BTC)</T></p>
+          <p className="font-semibold text-brand-900">{t("Paiement en {currency}", { currency })}</p>
           <p id="payment-availability" className="mt-1 text-sm text-stone-600">
-            <T>Le montant en BTC et l’adresse de paiement seront affichés à l’étape suivante. Réseau Bitcoin uniquement.</T>
+            {t("Réseau : {network}", { network: payment.network })}
           </p>
+          <p className="mt-2 text-sm text-stone-600"><T>Le montant exact et les instructions de paiement seront affichés à l’étape suivante.</T></p>
         </div>
         {error && <p role="alert" className="rounded-xl bg-red-50 p-3 text-sm text-red-700"><T>{error}</T></p>}
         <button className="btn-primary w-full text-lg disabled:cursor-not-allowed" disabled={loading} aria-describedby="payment-availability">
-          {loading ? t("Redirection vers le paiement…") : t("Payer {total} en Bitcoin", { total: valid ? (value * quantity).toLocaleString("fr-FR") + " €" : "" })}
+          {loading ? t("Redirection vers le paiement…") : t("Payer {total} en {currency}", { currency, total: valid ? (value * quantity).toLocaleString("fr-FR") + " €" : "" })}
         </button>
-        <p className="text-center text-xs text-stone-500"><T>Le code est envoyé après vérification du dépôt Bitcoin par notre équipe.</T></p>
+        <p className="text-center text-xs text-stone-500"><T>Le code est envoyé après vérification du paiement par notre équipe.</T></p>
       </form>
     </div>
   );

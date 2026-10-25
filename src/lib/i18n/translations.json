@@ -161,7 +161,17 @@
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "The payment window has expired. If you already sent BTC, wait for verification. Otherwise, create a new order.",
     "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Keep your transaction ID (TXID) and order number. Receipt is verified before codes are sent.",
     "Liens de réception crypto": "Crypto reception links",
-    "Lien de réception à configurer": "Reception link to configure"
+    "Lien de réception à configurer": "Reception link to configure",
+    "Choisissez votre moyen de paiement": "Choose your payment method",
+    "Paiement en {currency}": "Payment in {currency}",
+    "Réseau : {network}": "Network: {network}",
+    "Payer {total} en {currency}": "Pay {total} in {currency}",
+    "Le montant exact et les instructions de paiement seront affichés à l’étape suivante.": "The exact amount and payment instructions will appear in the next step.",
+    "Le code est envoyé après vérification du paiement par notre équipe.": "The code is sent after our team verifies the payment.",
+    "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "We are waiting for our team to verify the payment. This page refreshes automatically.",
+    "Adresse de réception": "Receiving address",
+    "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Use only the specified network. Send the exact amount within 30 minutes. You pay the network fees.",
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "The payment window has expired. If you already paid, wait for verification. Otherwise, create a new order."
   },
   "de": {
     "Cartes cadeaux": "Geschenkkarten",
@@ -325,7 +335,17 @@
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "Die Zahlungsfrist ist abgelaufen. Falls Sie BTC gesendet haben, warten Sie auf die Prüfung. Andernfalls bestellen Sie erneut.",
     "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewahren Sie TXID und Bestellnummer auf. Der Eingang wird vor dem Codeversand geprüft.",
     "Liens de réception crypto": "Krypto-Empfangslinks",
-    "Lien de réception à configurer": "Empfangslink noch einzurichten"
+    "Lien de réception à configurer": "Empfangslink noch einzurichten",
+    "Choisissez votre moyen de paiement": "Wählen Sie Ihre Zahlungsmethode",
+    "Paiement en {currency}": "Zahlung in {currency}",
+    "Réseau : {network}": "Netzwerk: {network}",
+    "Payer {total} en {currency}": "{total} in {currency} bezahlen",
+    "Le montant exact et les instructions de paiement seront affichés à l’étape suivante.": "Der genaue Betrag und die Zahlungsanweisungen werden im nächsten Schritt angezeigt.",
+    "Le code est envoyé après vérification du paiement par notre équipe.": "Der Code wird nach Prüfung der Zahlung durch unser Team versendet.",
+    "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Wir warten auf die Zahlungsprüfung durch unser Team. Diese Seite wird automatisch aktualisiert.",
+    "Adresse de réception": "Empfangsadresse",
+    "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Verwenden Sie nur das angegebene Netzwerk. Senden Sie den genauen Betrag innerhalb von 30 Minuten. Sie tragen die Netzwerkgebühren.",
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Die Zahlungsfrist ist abgelaufen. Falls Sie bereits bezahlt haben, warten Sie auf die Prüfung. Andernfalls erstellen Sie eine neue Bestellung."
   },
   "es": {
     "Cartes cadeaux": "Tarjetas regalo",
@@ -489,7 +509,17 @@
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "El plazo ha expirado. Si ya enviaste BTC, espera la verificación. Si no, crea otro pedido.",
     "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva el TXID y el número de pedido. La recepción se verifica antes de enviar los códigos.",
     "Liens de réception crypto": "Enlaces de recepción de criptomonedas",
-    "Lien de réception à configurer": "Enlace de recepción por configurar"
+    "Lien de réception à configurer": "Enlace de recepción por configurar",
+    "Choisissez votre moyen de paiement": "Elige tu método de pago",
+    "Paiement en {currency}": "Pago en {currency}",
+    "Réseau : {network}": "Red: {network}",
+    "Payer {total} en {currency}": "Pagar {total} en {currency}",
+    "Le montant exact et les instructions de paiement seront affichés à l’étape suivante.": "El importe exacto y las instrucciones de pago aparecerán en el siguiente paso.",
+    "Le code est envoyé après vérification du paiement par notre équipe.": "El código se envía tras la verificación del pago por nuestro equipo.",
+    "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Esperamos que nuestro equipo verifique el pago. Esta página se actualiza automáticamente.",
+    "Adresse de réception": "Dirección de recepción",
+    "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Utiliza solo la red indicada. Envía el importe exacto en 30 minutos. Las comisiones de red corren por tu cuenta.",
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "El plazo de pago ha caducado. Si ya pagaste, espera la verificación. De lo contrario, crea un nuevo pedido."
   },
   "it": {
     "Cartes cadeaux": "Carte regalo",
@@ -653,7 +683,17 @@
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "Il termine è scaduto. Se hai già inviato BTC, attendi la verifica. Altrimenti crea un nuovo ordine.",
     "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Conserva TXID e numero d’ordine. La ricezione viene verificata prima dell’invio dei codici.",
     "Liens de réception crypto": "Link di ricezione crypto",
-    "Lien de réception à configurer": "Link di ricezione da configurare"
+    "Lien de réception à configurer": "Link di ricezione da configurare",
+    "Choisissez votre moyen de paiement": "Scegli il metodo di pagamento",
+    "Paiement en {currency}": "Pagamento in {currency}",
+    "Réseau : {network}": "Rete: {network}",
+    "Payer {total} en {currency}": "Paga {total} in {currency}",
+    "Le montant exact et les instructions de paiement seront affichés à l’étape suivante.": "L’importo esatto e le istruzioni di pagamento saranno mostrati nel passaggio successivo.",
+    "Le code est envoyé après vérification du paiement par notre équipe.": "Il codice viene inviato dopo la verifica del pagamento da parte del nostro team.",
+    "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "Attendiamo la verifica del pagamento da parte del nostro team. Questa pagina si aggiorna automaticamente.",
+    "Adresse de réception": "Indirizzo di ricezione",
+    "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Usa solo la rete indicata. Invia l’importo esatto entro 30 minuti. Le commissioni di rete sono a tuo carico.",
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "Il termine di pagamento è scaduto. Se hai già pagato, attendi la verifica. Altrimenti crea un nuovo ordine."
   },
   "nl": {
     "Cartes cadeaux": "Cadeaukaarten",
@@ -817,6 +857,16 @@
     "Le délai de paiement est expiré. Si vous avez déjà envoyé les BTC, attendez la vérification. Sinon, créez une nouvelle commande.": "De betaaltermijn is verstreken. Heb je BTC verstuurd, wacht dan op controle. Maak anders een nieuwe bestelling.",
     "Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.": "Bewaar je TXID en bestelnummer. Ontvangst wordt gecontroleerd voordat codes worden verstuurd.",
     "Liens de réception crypto": "Crypto-ontvangstlinks",
-    "Lien de réception à configurer": "Ontvangstlink nog in te stellen"
+    "Lien de réception à configurer": "Ontvangstlink nog in te stellen",
+    "Choisissez votre moyen de paiement": "Kies je betaalmethode",
+    "Paiement en {currency}": "Betaling in {currency}",
+    "Réseau : {network}": "Netwerk: {network}",
+    "Payer {total} en {currency}": "Betaal {total} in {currency}",
+    "Le montant exact et les instructions de paiement seront affichés à l’étape suivante.": "Het exacte bedrag en de betaalinstructies verschijnen in de volgende stap.",
+    "Le code est envoyé après vérification du paiement par notre équipe.": "De code wordt verzonden nadat ons team de betaling heeft gecontroleerd.",
+    "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement.": "We wachten op de betalingscontrole door ons team. Deze pagina wordt automatisch vernieuwd.",
+    "Adresse de réception": "Ontvangstadres",
+    "Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.": "Gebruik alleen het aangegeven netwerk. Verstuur het exacte bedrag binnen 30 minuten. Je betaalt de netwerkkosten.",
+    "Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.": "De betaaltermijn is verstreken. Heb je al betaald, wacht dan op controle. Maak anders een nieuwe bestelling."
   }
 }

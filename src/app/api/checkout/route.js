@@ -1,5 +1,5 @@
 import { CARD_BRANDS } from "@/lib/catalog";
-import { bitcoinAddress, bitcoinQuote } from "@/lib/payment";
+import { cryptoQuote } from "@/lib/payment";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/supabase";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
@@ -9,13 +9,13 @@ const clean = (s, n) => String(s || "").trim().slice(0, n);
 const err = (m, status = 400) => NextResponse.json({ error: m }, { status });
 
 export async function POST(req) {
-  const address = bitcoinAddress();
-  if (!address) return err("Paiement Bitcoin en cours de configuration.", 503);
   if (!rateLimit("checkout:" + clientIp(req), 10, 10 * 60_000)) return err("Trop de tentatives, réessayez plus tard.", 429);
   let b;
   try { b = await req.json(); } catch { return err("Requête invalide"); }
   if (b.website) return err("Requête invalide"); // honeypot anti-bots
 
+  const currency = b.currency || "BTC";
+  if (!["BTC", "ETH", "USDT"].includes(currency)) return err("Devise invalide.");
   const brand = b.brand;
   if (!CARD_BRANDS.includes(brand)) return err("Veuillez choisir une carte du catalogue.");
   const amount = Number(b.amount);
@@ -28,13 +28,12 @@ export async function POST(req) {
   if (recipientEmail && !EMAIL.test(recipientEmail)) return err("E-mail du destinataire invalide.");
 
   let quote;
-  try { quote = await bitcoinQuote(amount * quantity * 100); }
+  try { quote = await cryptoQuote(amount * quantity * 100, currency); }
   catch { return err("Paiement momentanément indisponible.", 502); }
   const supa = db();
   const { data: order, error } = await supa.from("orders").insert({
     ...quote,
-    bitcoin_address: address,
-    payment_method: "bitcoin",
+    payment_method: "crypto",
     brand,
     quantity,
     amount_cents: amount * quantity * 100,

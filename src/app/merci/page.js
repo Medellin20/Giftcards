@@ -20,7 +20,7 @@ export default async function Merci({ searchParams }) {
           ? "Vos cartes cadeaux ont été envoyées à {email}{recipient}. Pensez à vérifier vos courriers indésirables."
           : "Votre carte cadeau a été envoyée à {email}{recipient}. Pensez à vérifier vos courriers indésirables."}</T>
       : "Votre paiement est bien confirmé. L’envoi de l’e-mail rencontre un retard ; vous le recevrez très bientôt (sinon, contactez-nous)." },
-    pending: { icon: "⏳", title: "Vérification du paiement…", text: "Nous attendons la vérification du dépôt Bitcoin par notre équipe. Cette page s’actualise automatiquement." },
+    pending: { icon: "⏳", title: "Vérification du paiement…", text: "Nous attendons la vérification du paiement par notre équipe. Cette page s’actualise automatiquement." },
     failed: { icon: "❌", title: "Paiement refusé", text: "Le paiement n’a pas abouti. Aucun montant n’a été débité. Vous pouvez réessayer." },
     mismatch: { icon: "⚠️", title: "Vérification requise", text: "Une incohérence a été détectée sur ce paiement. Contactez-nous en indiquant votre numéro de commande." },
     not_found: { icon: "❓", title: "Commande introuvable", text: "Nous ne retrouvons pas cette commande." },
@@ -33,6 +33,18 @@ export default async function Merci({ searchParams }) {
       <div className="text-6xl">{v.icon}</div>
       <h1 className="mt-4 text-3xl font-extrabold text-brand-900"><T>{v.title}</T></h1>
       <p className="mt-3 text-stone-600"><T>{v.text}</T></p>
+      {r.status === "pending" && r.order?.payment_method === "crypto" && (
+        <div className="mt-6 space-y-4 rounded-2xl bg-white p-6 text-left ring-1 ring-stone-200">
+          <p className="font-bold"><T values={{ network: r.order.crypto_network }}>{"Réseau : {network}"}</T></p>
+          {new Date(r.order.crypto_expires_at).getTime() > Date.now() ? <>
+            <p><T>Montant exact à recevoir :</T> <strong>{r.order.crypto_amount} {r.order.crypto_currency}</strong></p>
+            <p className="text-sm"><T>Adresse de réception</T></p>
+            <code className="block break-all rounded-xl bg-stone-100 p-3 text-sm">{r.order.crypto_address}</code>
+            <p className="text-sm"><T>Utilisez uniquement le réseau indiqué. Envoyez le montant exact sous 30 minutes. Les frais de réseau sont à votre charge.</T></p>
+          </> : <p role="status"><T>Le délai de paiement est expiré. Si vous avez déjà payé, attendez la vérification. Sinon, créez une nouvelle commande.</T></p>}
+          <p className="text-sm"><T>Conservez votre identifiant de transaction (TXID) et votre numéro de commande. La réception sera vérifiée avant l’envoi des codes.</T></p>
+        </div>
+      )}
       {r.status === "pending" && r.order?.payment_method === "bitcoin" && (
         <div className="mt-6 space-y-4 rounded-2xl bg-white p-6 text-left ring-1 ring-stone-200">
           <p className="font-bold"><T>Réseau : Bitcoin (BTC) uniquement</T></p>
